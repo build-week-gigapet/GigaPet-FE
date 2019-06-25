@@ -1,0 +1,21 @@
+@import './variables';
+@import './mixins';
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0; 
+  padding: 0;
+}
+
+body {
+  .flex(none, center, column);
+  background-color: @gigapet-color-background;
+  color: @gigapet-color-primary;
+  font-family: 'PT Sans', sans-serif;
+}
+
+@import './navbar';
+@import './about';
