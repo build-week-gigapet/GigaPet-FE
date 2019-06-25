@@ -1,67 +1,12 @@
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-body {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: column;
-  background-color: #f1f1f1;
-  color: #333;
-  font-family: 'PT Sans', sans-serif;
-}
-nav {
+
+.header {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: none;
+
   flex-direction: row;
   position: fixed;
   height: 44px;
   background-color: #333;
-  z-index: 100;
-  opacity: 0.8;
-}
-nav a {
-  margin: 0 10px;
-  text-decoration: none;
-}
-.container.about main {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.container.about main .carousel,
-.container.about main .cards {
-  display: flex;
-  justify-content: none;
-  align-items: none;
-  flex-direction: row;
-  flex-wrap: wrap;
-  flex: 3;
-}
-.container.about main .carousel div,
-.container.about main .cards div {
-  flex-grow: 1;
-  flex: 1 1 30%;
-  margin: 20px 0;
-}
-.container.about footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  height: 50px;
-  margin-top: 50px;
-  background-color: #333;
-  color: #fff;
 }
