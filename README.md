@@ -1,2 +1,2 @@
-# welcome.html
-welcome  page
+# welcome
+GigaPet build week project Front End Repository

@@ -1,23 +1,8 @@
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  margin: 0;
-  padding: 0;
-}
-body {
-  display: flex;
-  justify-content: none;
-  align-items: center;
-  flex-direction: column;
-  background-color: #f1f1f1;
-  color: #333;
-  font-family: 'PT Sans', sans-serif;
-}
-nav {
+
+.header {
   width: 100%;
   display: flex;
+<<<<<<< HEAD
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
@@ -283,8 +268,13 @@ nav a {
 .about .cards {
   display: flex;
   justify-content: none;
+=======
+  justify-content: center;
+>>>>>>> a075955ae7243b54f28489f40b8d166ed1733338
   align-items: none;
+
   flex-direction: row;
+<<<<<<< HEAD
   flex-wrap: wrap;
   flex: 3;
 }
@@ -321,6 +311,9 @@ nav a {
   flex-direction: row;
   height: 50px;
   margin-top: 50px;
+=======
+  position: fixed;
+  height: 44px;
+>>>>>>> a075955ae7243b54f28489f40b8d166ed1733338
   background-color: #333;
-  color: #fff;
 }
