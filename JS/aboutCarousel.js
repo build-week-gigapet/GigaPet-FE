@@ -2,6 +2,8 @@ class Carousel{
   constructor(element){
     this.element = element;
     this.tabs = element.querySelectorAll('.tab');
+    this.tabData = this.tabs[2].dataset.tab;
+
 
     this.leftBtn = element.querySelector('.btn-left');
     this.rightBtn = element.querySelector('.btn-right');
@@ -13,6 +15,7 @@ class Carousel{
   moveLeft(){
     const tmpNode =this.tabs[0];
     this.tabs[0].className = 'tab move-out-from-left';
+    document.querySelector('.card-active').classList.remove('card-active');
     
     setTimeout(()=>{
       if(this.tabs.length>5){
@@ -26,6 +29,11 @@ class Carousel{
       this.tabs[0].remove();
       this.element.querySelector('.tab-container').appendChild(tmpNode);
       this.tabs = this.element.querySelectorAll('.tab');
+      
+      this.tabData = this.tabs[2].dataset.tab;
+      this.card = document.querySelector(`.card[data-tab= '${this.tabData}']`);
+      this.card = new TabCard(this.card); 
+      this.card.selectCard();
 
 
     }, 500)
@@ -34,6 +42,7 @@ class Carousel{
 
   moveRight(){
     this.tabs[4].className ='tab move-out-from-right';
+    document.querySelector('.card-active').classList.remove('card-active');
     
     setTimeout(()=>{
       const tabNum = this.tabs.length;
@@ -52,8 +61,22 @@ class Carousel{
       this.tabs[3].className = "tab move-to-position5-from-right";
       this.tabs = this.element.querySelectorAll('.tab');
 
+      this.tabData = this.tabs[2].dataset.tab;
+      this.card = document.querySelector(`.card[data-tab= '${this.tabData}']`);
+      this.card = new TabCard(this.card); 
+      this.card.selectCard();
+
     }, 500)
 
+  }
+}
+
+class TabCard{
+  constructor(element){
+    this.element = element;
+  }
+  selectCard(){
+    this.element.classList.add('card-active');
   }
 }
 
