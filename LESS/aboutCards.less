@@ -1,18 +1,62 @@
 .about{
   .cards{
-    .flex();
-    flex-wrap: wrap;
-    flex: 3;
+    position: relative;
+    .flex(center,center);
+    background: @gigapet-color-white; 
+    width: 70%;
+    height: 50vw;
+    padding: 4% 0 6% 0;
+    margin-top: 5vw;
+
+    .title {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			display: block;
+			width: 25%;
+			height: 3.25%;
+			top: -3.25%;
+			line-height: 3.25%;
+			margin-bottom: -3.25%;
+			margin-left: -12.5%;
+      padding-top: 0.5%;
+      background: @gigapet-color-white;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -38px;
+        left: -35px;
+        width: 35px;
+        height: 38px;
+        background: url("../img/about/shadow.png");
+      }
+  
+      &:after {
+        transform: scaleX(-1);
+        content: '';
+        position: absolute;
+        bottom: -38px;
+        right: -35px;
+        width: 35px;
+        height: 38px;
+        background: url("../img/about/shadow.png");
+      }
+		}
     
 
     .card{
-      flex-grow: 1;
-      flex: 1 1 30%;
-      margin: 20px 0;
+      //margin: 20px 0;
       display: none;
     }
     .card-active{
       .flex(center,center,column);
+
+      @media(max-width:1000px){
+        .name, img {
+          display: none;
+        }
+      }
     }
   }
 }
