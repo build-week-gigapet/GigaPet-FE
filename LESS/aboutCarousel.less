@@ -1,8 +1,9 @@
 .about{
   .carousel{
     position: relative;
-    .flex(space-between,center,row);
+    .flex(space-around,center,row);
     width: 100%;
+    margin-top: 2vw;
 
     .tab-wrapper{
       position: relative;
@@ -23,7 +24,7 @@
           //overflow: hidden;
           width: 25%;
           height: 25vw;
-          box-shadow: 0 0 2% 0 @gigapet-color-lightgrey;
+          box-shadow: 0 0 4rem 0 @gigapet-color-lightgrey;
           background-color: @gigapet-color-white;
           .flex(space-between,center,column);
           position: relative;
@@ -84,7 +85,7 @@
             margin: 0;
             margin-bottom: 5px;
             @media(max-width: 1000px){
-              font-size: 14px;
+              font-size: 10px;
             }
             @media(max-width:500px){
               font-size: 8px;
@@ -96,17 +97,17 @@
             }
           }
         }
-        .carousel-text{
-          text-align: center;
-          width:75%;
-
-          h3{
-            padding: 1rem;
-          }
-        }
         .tab-hide{
           display:none;
         }
+      }
+    }
+    .carousel-text{
+      .flex(center,center);
+      width:100%;
+
+      h3{
+        padding: 1rem;
       }
     }
     .button.btn-left, .button.btn-right{

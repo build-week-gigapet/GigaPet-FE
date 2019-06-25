@@ -34,10 +34,11 @@ nav a {
 .about .carousel {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   flex-direction: row;
   width: 100%;
+  margin-top: 2vw;
 }
 .about .carousel .tab-wrapper {
   position: relative;
@@ -64,7 +65,7 @@ nav a {
 .about .carousel .tab-wrapper .tab-container .tab {
   width: 25%;
   height: 25vw;
-  box-shadow: 0 0 2% 0 lightgrey;
+  box-shadow: 0 0 4rem 0 lightgrey;
   background-color: #fff;
   display: flex;
   justify-content: space-between;
@@ -128,7 +129,7 @@ nav a {
 }
 @media (max-width: 1000px) {
   .about .carousel .tab-wrapper .tab-container .tab p {
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 @media (max-width: 500px) {
@@ -141,15 +142,18 @@ nav a {
     display: none;
   }
 }
-.about .carousel .tab-wrapper .tab-container .carousel-text {
-  text-align: center;
-  width: 75%;
-}
-.about .carousel .tab-wrapper .tab-container .carousel-text h3 {
-  padding: 1rem;
-}
 .about .carousel .tab-wrapper .tab-container .tab-hide {
   display: none;
+}
+.about .carousel .carousel-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.about .carousel .carousel-text h3 {
+  padding: 1rem;
 }
 .about .carousel .button.btn-left,
 .about .carousel .button.btn-right {
@@ -315,7 +319,7 @@ nav a {
   width: 70%;
   height: 50vw;
   padding: 4% 0 6% 0;
-  margin-top: 5vw;
+  margin-top: 3vw;
 }
 .about .cards .title {
   position: absolute;
@@ -323,10 +327,9 @@ nav a {
   left: 50%;
   display: block;
   width: 25%;
-  height: 3.25%;
-  top: -3.25%;
-  line-height: 3.25%;
-  margin-bottom: -3.25%;
+  height: 5%;
+  top: -5%;
+  margin-bottom: -5%;
   margin-left: -12.5%;
   padding-top: 0.5%;
   background: #fff;
