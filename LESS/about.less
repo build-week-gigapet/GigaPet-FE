@@ -1,11 +1,15 @@
 .container.about{
   main{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     margin-top: 50px;
     .flex(center,center,column);
 
-    .carousel, .cards{
+    @media(max-width:500px){
+      width: 98%;
+    }
+
+    .cards{
       .flex();
       flex-wrap: wrap;
       flex: 3;

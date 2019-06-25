@@ -1,0 +1,107 @@
+.carousel{
+  .flex(space-around,center);
+  width: 100%;
+
+  .tab-wrapper{
+    .flex(center,center,column);
+    width: 100%;
+
+    .tab-container{
+      .flex(center,center);
+      width: 100%;
+      height: 25rem;
+
+      @media(max-width:500px) {
+        height: 15rem;
+      }
+
+      .tab{
+        width: 20%;
+        height: 20rem;
+        box-shadow: 0px 0px 2rem 0px @gigapet-color-lightgrey;
+        background-color: @gigapet-color-white;
+        .flex(space-between,center,column);
+        position: relative;
+
+        &:nth-child(2n){
+          transform: scale(0.85);
+          z-index: -1;
+        }
+        &:nth-child(2){
+          left: 5%;
+        }
+        &:nth-child(4){
+          left: -5%;
+        }
+        &:nth-child(4n + 1){
+          transform: scale(0.75);
+          z-index: -2;
+        }
+        &:nth-child(1){
+          left: 15%;
+        }
+        &:nth-child(5){
+          left: -15%;
+        }
+        @media(max-width:500px){
+          width: 50%;
+          height: 13rem;
+
+          &:nth-child(2n){
+            transform: scale(0.75);
+            z-index: -1;
+          }
+          &:nth-child(2){
+            left: 10%;
+          }
+          &:nth-child(4){
+            left: -10%;
+          }
+          &:nth-child(4n + 1){
+            transform: scale(0.65);
+            z-index: -2;
+          }
+          &:nth-child(1){
+            left: 20%;
+          }
+          &:nth-child(5){
+            left: -20%;
+          }
+
+        }
+
+        img{
+          height:80%;
+          width: 100%;
+          margin-top: 5%;
+          margin-bottom: 0;
+        }
+        p{
+          height: 5%;
+          margin: 0;
+          margin-bottom: 10px;
+        }
+      }
+      .carousel-text{
+        text-align: center;
+        width:75%;
+
+        h3{
+          padding: 1rem;
+        }
+      }
+      .tab-hide{
+        display:none;
+      }
+    }
+  }
+  .button{
+    margin-left: 0 3%;
+    width: 5%;
+    cursor: pointer;
+
+    img{
+      width: 60%;
+    }
+  }
+}
