@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "flappy";
+  src: url(../font/FlappyBirdy.ttf);
+}
 * {
   box-sizing: border-box;
 }
@@ -27,6 +31,11 @@ nav {
   z-index: 100;
   opacity: 0.8;
 }
+nav .logo p {
+  font-family: "flappy";
+  font-size: 55px;
+  color: black;
+}
 nav a {
   margin: 0 10px;
   text-decoration: none;
@@ -35,18 +44,16 @@ nav a {
 @media (max-width: 500px) {
   .container.home {
     width: 100%;
-    flex-direction: row;
-    justify-content: space-around;
   }
 }
 .container.home main {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 50px;
 }
 @media (max-width: 500px) {
   .container.home main {
-    width: 100%;
+    width: 95%;
   }
 }
 .container.home main .welcome {
@@ -95,9 +102,9 @@ nav a {
 }
 .container.home main .left-button:hover,
 .container.home main .right-button:hover {
-  color: blue;
+  color: #f2d95c;
   background-color: gray;
-  border: 2px solid black;
+  border: 2px solid #f2d95c;
 }
 .container.home main .left-button {
   top: 50%;
@@ -131,7 +138,12 @@ nav a {
 }
 .middle {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+}
+@media (max-width: 500px) {
+  .middle {
+    width: 95%;
+  }
 }
 .middle .charting-content {
   width: 50%;
@@ -143,11 +155,15 @@ nav a {
 }
 .middle .charting-content h3 {
   color: #163046;
-  font-family: cursive;
+  font-family: "flappy";
+  font-size: 55px;
 }
 .middle .charting-content img {
   width: 100%;
   border-radius: 10px;
+}
+.middle .charting-content img:hover {
+  opacity: 0.7;
 }
 .middle .charting-content p {
   color: #112d45;
@@ -165,25 +181,33 @@ nav a {
 .middle .try-content img {
   width: 100%;
   border-radius: 10px;
-  height: 50%;
+}
+.middle .try-content img:hover {
+  opacity: 0.7;
 }
 .middle .try-content h3 {
   color: #163046;
-  font-family: cursive;
+  font-family: "flappy";
+  font-size: 55px;
 }
 .middle .try-content p {
   color: #112d45;
 }
-.middle .try-content button {
+.click {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.click button {
   padding: 10px 40px;
   margin-top: 20px;
   cursor: pointer;
   background: #f2eda2;
   text-align: center;
   width: 150px;
-  height: 40px;
+  height: 55px;
 }
-.middle .try-content button:hover {
+.click button:hover {
   background: #822bd9;
   color: white;
 }
