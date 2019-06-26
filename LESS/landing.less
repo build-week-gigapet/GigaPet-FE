@@ -1,19 +1,32 @@
 // less page
 .container.home {
+  @media (max-width: 500px) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-around;
+  }
   main {
     width: 80%;
     margin: 0 auto;
     margin-top: 50px;
+
+    @media (max-width: 500px) {
+      width: 100%;
+      //   flex-direction: row;
+      //   justify-content: space-around;
+    }
 
     .welcome {
       margin: 30px 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      line-height: 1.4;
 
       h1 {
         font-family: cursive;
         color: @gigapet-color-h3;
+        font-style: italic;
       }
 
       p {
@@ -69,6 +82,12 @@
     margin-top: 50px;
     background-color: @gigapet-color-primary;
     color: @gigapet-color-h3;
+
+    @media (max-width: 500px) {
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-around;
+    }
   }
 }
 
@@ -83,6 +102,7 @@
     padding-top: 40px;
     text-align: center;
     padding: 40px;
+    line-height: 1.4;
 
     h3 {
       color: @gigapet-color-h3;
@@ -105,9 +125,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    line-height: 1.5;
+    line-height: 1.4;
     text-align: center;
-    padding: 40px;
+    //padding: 40px;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+      height: 50%;
+    }
 
     h3 {
       color: @gigapet-color-h3;
@@ -152,6 +178,7 @@
     //      background-image: linear-gradient(to bottom, #1e62d0, #3d94f6);
     //      text-decoration: none;
     // }
+
     button {
       padding: 10px 40px;
       margin-top: 20px;
@@ -160,10 +187,10 @@
       //border-radius: 5px;
       //border: 1px solid black;
       text-align: center;
-      width: 200px;
-      height: 100px;
+      width: 150px;
+      height: 40px;
       //background: red;
-      border-radius: 100px / 50px;
+      //border-radius: 100px / 50px;
     }
     button:hover {
       background: #822bd9;
