@@ -142,7 +142,12 @@ nav a {
   text-align: center;
   padding: 40px;
   line-height: 1.4;
-  border: 1px soild red;
+  border: 1px solid red;
+}
+@media (max-width: 500px) {
+  .middle .charting-content {
+    width: 95%;
+  }
 }
 .middle .charting-content h3 {
   color: #163046;
@@ -176,13 +181,31 @@ nav a {
   display: flex;
   justify-content: center;
 }
-.spin h3 {
+.spin p {
   font-family: "flappy";
+  display: flex;
+  justify-content: center;
+}
+.spin .rotate {
+  animation: rotation 8s infinite linear;
+  width: 100px;
+}
+.spin .rotate img {
+  width: 100%;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 .click {
   display: flex;
   justify-content: center;
-  padding: 20px;
+  align-content: center;
+  padding: 10px;
 }
 .click button {
   padding: 10px 40px;
@@ -194,7 +217,7 @@ nav a {
   height: 55px;
 }
 .click button:hover {
-  background: #822bd9;
+  background: #434643;
   color: white;
 }
 footer {
@@ -203,7 +226,7 @@ footer {
   align-items: center;
   flex-direction: row;
   height: 50px;
-  margin-top: 50px;
+  margin-top: 25px;
   background-color: #434643;
   color: #163046;
   width: 100%;
