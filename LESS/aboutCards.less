@@ -1,0 +1,143 @@
+.about{
+  .cards{
+    position: relative;
+    .flex(center,center);
+    background: @gigapet-color-bkg-secondary;
+    background-size: cover;
+    width: 70%;
+    margin-top: 3vw;
+    z-index: -5;
+    border: 4px solid black;
+    box-shadow: inset  0px 0px 15px 10px black;
+
+    .title {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			display: block;
+			width: 25%;
+			height: 4rem;
+			top: -2rem;
+			margin-bottom: -5%;
+			margin-left: -12.5%;
+      padding-top: 0.5%;
+      background-image: linear-gradient(to bottom, @gigapet-color-background 0%, @gigapet-color-bkg-secondary 100%);
+      border-left: 4px solid black;
+      border-right: 4px solid black;
+      
+      z-index: 10;
+      
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: -35px;
+        width: 35px;
+        height: 33px;
+        background: url("../img/about/shadow.png");
+        z-index: 100;
+      }
+  
+      &:after {
+        transform: scaleX(-1);
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        right: -35px;
+        width: 35px;
+        height: 33px;
+        background: url("../img/about/shadow.png");
+        z-index: 100;
+      }
+		}
+    
+
+    .card{
+      //margin: 20px 0;
+      display: none;
+    }
+    .card-active{
+      .flex(space-around,center,row);
+      height: 350px;
+      animation: expand 0.8s ease-in-out;
+      overflow: hidden;
+      //border: 4px solid black;
+      //box-shadow: inset  0px 0px 15px 10px black;
+
+      @media(max-width:1000px){
+        .flex(center,center,row);
+        height: 250px;
+        .name, .card-img {
+          display: none;
+        }
+      }
+
+      .card-img{
+        width:30%;
+        height: 60%;
+        border: 3px double black;
+        box-shadow: inset 0px 0px 20px rgba(0,0,0,1);
+        
+        img{
+          width:100%;
+          height:100%;
+          position: relative;
+          z-index: -1;
+        }
+      }
+      .card-text{
+        width:60%;
+
+        @media(max-width: 1000px){
+          width:87%;
+          .flex(center,center,column);
+        }
+
+        p{
+          padding:20px 50px;
+          //background: @gigapet-color-bkg-third;
+          background-image: url(../img/about/frostedGlass.png);
+          background-size: contain;
+          border-radius: 50px;
+          border: 2px groove @gigapet-color-background;
+          @media(max-width: 1000px){
+            padding: 10px 25px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.shrink {
+  animation: shrink 0.5s ease-in-out;
+}
+
+@keyframes shrink {
+  0% {
+      height: 15vw;
+  }
+  100% {
+      height: 5vw;
+  }
+}
+
+@keyframes expand {
+  0% {
+      height: 5vw;
+  }
+  100% {
+      height: 350px;
+  }
+}
+@media(max-width: 1000px){
+  @keyframes expand {
+    0% {
+        height: 5vw;
+    }
+    100% {
+        height: 250px;
+    }
+  }
+}
