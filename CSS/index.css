@@ -57,11 +57,13 @@ nav a {
   }
 }
 .container.home main .welcome {
-  margin: 30px 0;
+  margin: 30px 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   line-height: 1.4;
+  box-shadow: 0 0 10px royalblue;
+  opacity: 0.8;
 }
 .container.home main .welcome h1 {
   font-family: cursive;
@@ -70,6 +72,8 @@ nav a {
 }
 .container.home main .welcome p {
   color: #112d45;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
 .container.home main .carousel {
   width: 100%;
@@ -77,7 +81,7 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  height: 500px;
+  height: 400px;
   position: relative;
   overflow: hidden;
   margin-top: 16px;
@@ -119,26 +123,13 @@ nav a {
 .container.home main img {
   width: 100%;
 }
-.container.home footer {
+.middle {
+  box-shadow: inset 0 0 10px;
+  border: 1px dashed black;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
-  height: 50px;
-  margin-top: 50px;
-  background-color: #434643;
-  color: #163046;
-}
-@media (max-width: 500px) {
-  .container.home footer {
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-}
-.middle {
-  display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
 @media (max-width: 500px) {
   .middle {
@@ -147,11 +138,11 @@ nav a {
 }
 .middle .charting-content {
   width: 50%;
-  margin: 20px 0 35px 0;
-  padding-top: 40px;
+  margin: 20px 20px;
   text-align: center;
   padding: 40px;
   line-height: 1.4;
+  border: 1px soild red;
 }
 .middle .charting-content h3 {
   color: #163046;
@@ -167,31 +158,26 @@ nav a {
 }
 .middle .charting-content p {
   color: #112d45;
+  animation-duration: 3s;
+  animation-name: slidein;
 }
-.middle .try-content {
-  width: 50%;
-  margin: 20px 0 35px 0;
-  padding-top: 40px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  line-height: 1.4;
-  text-align: center;
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
-.middle .try-content img {
+.spin {
   width: 100%;
-  border-radius: 10px;
+  display: flex;
+  justify-content: center;
 }
-.middle .try-content img:hover {
-  opacity: 0.7;
-}
-.middle .try-content h3 {
-  color: #163046;
+.spin h3 {
   font-family: "flappy";
-  font-size: 55px;
-}
-.middle .try-content p {
-  color: #112d45;
 }
 .click {
   display: flex;
@@ -210,6 +196,24 @@ nav a {
 .click button:hover {
   background: #822bd9;
   color: white;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  margin-top: 50px;
+  background-color: #434643;
+  color: #163046;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  footer {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
 }
 .container.about main {
   width: 80%;
