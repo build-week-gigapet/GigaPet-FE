@@ -11,8 +11,8 @@ body {
   justify-content: none;
   align-items: center;
   flex-direction: column;
-  background-color: #f1f1f1;
-  color: #333;
+  background-color: #659dbd;
+  color: #434643;
   font-family: 'PT Sans', sans-serif;
 }
 nav {
@@ -23,7 +23,7 @@ nav {
   flex-direction: row;
   position: fixed;
   height: 44px;
-  background-color: #333;
+  background-color: #434643;
   z-index: 100;
   opacity: 0.8;
 }
@@ -65,7 +65,7 @@ nav a {
 .about .carousel .tab-wrapper .tab-container .tab {
   width: 25%;
   height: 25vw;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 78%, #ffffff 79%, #ffffff 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 78%, #93bfda 79%, #93bfda 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -128,18 +128,19 @@ nav a {
 .about .carousel .tab-wrapper .tab-container .tab .name {
   font-weight: 600;
 }
-.about .carousel .tab-wrapper .tab-container .tab p {
+.about .carousel .tab-wrapper .tab-container .tab p,
+.about .carousel .tab-wrapper .tab-container .tab h3 {
   height: 5%;
   margin: 0;
   margin-bottom: 5px;
 }
 @media (max-width: 1000px) {
-  .about .carousel .tab-wrapper .tab-container .tab p {
+  .about .carousel .tab-wrapper .tab-container .tab h3 {
     font-size: 10px;
   }
 }
 @media (max-width: 500px) {
-  .about .carousel .tab-wrapper .tab-container .tab p {
+  .about .carousel .tab-wrapper .tab-container .tab h3 {
     font-size: 8px;
   }
 }
@@ -321,10 +322,13 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  background: #fff;
+  background: #93BFDA;
+  background-size: cover;
   width: 70%;
   margin-top: 3vw;
   z-index: -5;
+  border: 4px solid black;
+  box-shadow: inset  0px 0px 15px 10px black;
 }
 .about .cards .title {
   position: absolute;
@@ -332,31 +336,36 @@ nav a {
   left: 50%;
   display: block;
   width: 25%;
-  height: 2vw;
-  top: -2vw;
+  height: 4rem;
+  top: -2rem;
   margin-bottom: -5%;
   margin-left: -12.5%;
   padding-top: 0.5%;
-  background: #fff;
+  background-image: linear-gradient(to bottom, #659dbd 0%, #93BFDA 100%);
+  border-left: 4px solid black;
+  border-right: 4px solid black;
+  z-index: 10;
 }
 .about .cards .title:before {
   content: '';
   position: absolute;
-  bottom: -38px;
+  bottom: -1px;
   left: -35px;
   width: 35px;
-  height: 38px;
+  height: 33px;
   background: url("../img/about/shadow.png");
+  z-index: 100;
 }
 .about .cards .title:after {
   transform: scaleX(-1);
   content: '';
   position: absolute;
-  bottom: -38px;
+  bottom: -1px;
   right: -35px;
   width: 35px;
-  height: 38px;
+  height: 33px;
   background: url("../img/about/shadow.png");
+  z-index: 100;
 }
 .about .cards .card {
   display: none;
@@ -385,7 +394,7 @@ nav a {
 }
 .about .cards .card-active .card-img {
   width: 30%;
-  height: 50%;
+  height: 60%;
   border: 3px double black;
   box-shadow: inset 0px 0px 20px #000000;
 }
@@ -396,15 +405,28 @@ nav a {
   z-index: -1;
 }
 .about .cards .card-active .card-text {
-  width: 40%;
+  width: 60%;
 }
 @media (max-width: 1000px) {
   .about .cards .card-active .card-text {
-    width: 90%;
+    width: 87%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+}
+.about .cards .card-active .card-text p {
+  padding: 20px 50px;
+  background-image: url(../img/about/frostedGlass.png);
+  background-size: contain;
+  border-radius: 50px;
+  border: 2px groove #659dbd;
+}
+@media (max-width: 1000px) {
+  .about .cards .card-active .card-text p {
+    padding: 10px 25px;
+    font-size: 14px;
   }
 }
 .shrink {
@@ -513,6 +535,6 @@ nav a {
   flex-direction: row;
   height: 50px;
   margin-top: 50px;
-  background-color: #333;
-  color: #fff;
+  background-color: #434643;
+  color: white;
 }

@@ -2,10 +2,13 @@
   .cards{
     position: relative;
     .flex(center,center);
-    background: @gigapet-color-white; 
+    background: @gigapet-color-bkg-secondary;
+    background-size: cover;
     width: 70%;
     margin-top: 3vw;
     z-index: -5;
+    border: 4px solid black;
+    box-shadow: inset  0px 0px 15px 10px black;
 
     .title {
 			position: absolute;
@@ -13,32 +16,38 @@
 			left: 50%;
 			display: block;
 			width: 25%;
-			height: 2vw;
-			top: -2vw;
+			height: 4rem;
+			top: -2rem;
 			margin-bottom: -5%;
 			margin-left: -12.5%;
       padding-top: 0.5%;
-      background: @gigapet-color-white;
+      background-image: linear-gradient(to bottom, @gigapet-color-background 0%, @gigapet-color-bkg-secondary 100%);
+      border-left: 4px solid black;
+      border-right: 4px solid black;
+      
+      z-index: 10;
       
       &:before {
         content: '';
         position: absolute;
-        bottom: -38px;
+        bottom: -1px;
         left: -35px;
         width: 35px;
-        height: 38px;
+        height: 33px;
         background: url("../img/about/shadow.png");
+        z-index: 100;
       }
   
       &:after {
         transform: scaleX(-1);
         content: '';
         position: absolute;
-        bottom: -38px;
+        bottom: -1px;
         right: -35px;
         width: 35px;
-        height: 38px;
+        height: 33px;
         background: url("../img/about/shadow.png");
+        z-index: 100;
       }
 		}
     
@@ -52,6 +61,8 @@
       height: 350px;
       animation: expand 0.8s ease-in-out;
       overflow: hidden;
+      //border: 4px solid black;
+      //box-shadow: inset  0px 0px 15px 10px black;
 
       @media(max-width:1000px){
         .flex(center,center,row);
@@ -63,7 +74,7 @@
 
       .card-img{
         width:30%;
-        height: 50%;
+        height: 60%;
         border: 3px double black;
         box-shadow: inset 0px 0px 20px rgba(0,0,0,1);
         
@@ -75,12 +86,24 @@
         }
       }
       .card-text{
-        width:40%;
-        
+        width:60%;
 
         @media(max-width: 1000px){
-          width:90%;
+          width:87%;
           .flex(center,center,column);
+        }
+
+        p{
+          padding:20px 50px;
+          //background: @gigapet-color-bkg-third;
+          background-image: url(../img/about/frostedGlass.png);
+          background-size: contain;
+          border-radius: 50px;
+          border: 2px groove @gigapet-color-background;
+          @media(max-width: 1000px){
+            padding: 10px 25px;
+            font-size: 14px;
+          }
         }
       }
     }
