@@ -1,12 +1,274 @@
-
-.header {
+@font-face {
+  font-family: "flappy";
+  src: url(../font/FlappyBirdy.ttf);
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: column;
+  background-color: #659dbd;
+  color: #434643;
+  font-family: "PT Sans", sans-serif;
+}
+nav {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-items: none;
-
+  justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   position: fixed;
   height: 44px;
-  background-color: #333;
+  background-color: #434643;
+  z-index: 100;
+  opacity: 0.8;
+}
+nav .logo p {
+  font-family: "flappy";
+  font-size: 55px;
+  color: black;
+}
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #163046;
+}
+@media (max-width: 500px) {
+  .container.home {
+    width: 100%;
+  }
+}
+.container.home main {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+@media (max-width: 500px) {
+  .container.home main {
+    width: 95%;
+  }
+}
+.container.home main .welcome {
+  margin: 30px 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  line-height: 1.4;
+  box-shadow: 0 0 10px royalblue;
+  opacity: 0.8;
+}
+.container.home main .welcome h1 {
+  font-family: cursive;
+  color: #163046;
+  font-style: italic;
+}
+.container.home main .welcome p {
+  color: #112d45;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+.container.home main .carousel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 16px;
+}
+.container.home main .carousel img {
+  display: none;
+}
+.container.home main .left-button,
+.container.home main .right-button {
+  display: flex;
+  justify-content: center;
+  align-items: none;
+  flex-direction: row;
+  color: white;
+  background-color: gray;
+  font-size: 40px;
+  border-radius: 50%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.container.home main .left-button:hover,
+.container.home main .right-button:hover {
+  color: #f2d95c;
+  background-color: gray;
+  border: 2px solid #f2d95c;
+}
+.container.home main .left-button {
+  top: 50%;
+  left: 25px;
+  transform: translate(0, -50%);
+}
+.container.home main .right-button {
+  top: 50%;
+  right: 25px;
+  transform: translate(0, -50%);
+}
+.container.home main img {
+  width: 100%;
+}
+.middle {
+  box-shadow: inset 0 0 10px;
+  border: 1px dashed black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+@media (max-width: 500px) {
+  .middle {
+    width: 95%;
+  }
+}
+.middle .charting-content {
+  width: 50%;
+  margin: 20px 20px;
+  text-align: center;
+  padding: 40px;
+  line-height: 1.4;
+  border: 1px solid red;
+}
+@media (max-width: 500px) {
+  .middle .charting-content {
+    width: 95%;
+  }
+}
+.middle .charting-content h3 {
+  color: #163046;
+  font-family: "flappy";
+  font-size: 55px;
+}
+.middle .charting-content img {
+  width: 100%;
+  border-radius: 10px;
+}
+.middle .charting-content img:hover {
+  opacity: 0.7;
+}
+.middle .charting-content p {
+  color: #112d45;
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+.spin {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.spin p {
+  font-family: "flappy";
+  display: flex;
+  justify-content: center;
+}
+.spin .rotate {
+  animation: rotation 8s infinite linear;
+  width: 100px;
+}
+.spin .rotate img {
+  width: 100%;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+.click {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
+}
+.click button {
+  padding: 10px 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  background: #f2eda2;
+  text-align: center;
+  width: 150px;
+  height: 55px;
+}
+.click button:hover {
+  background: #434643;
+  color: white;
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  margin-top: 25px;
+  background-color: #434643;
+  color: #163046;
+  width: 100%;
+}
+@media (max-width: 500px) {
+  footer {
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+.container.about main {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container.about main .carousel,
+.container.about main .cards {
+  display: flex;
+  justify-content: none;
+  align-items: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 3;
+}
+.container.about main .carousel div,
+.container.about main .cards div {
+  flex-grow: 1;
+  flex: 1 1 30%;
+  margin: 20px 0;
+}
+.container.about footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  height: 50px;
+  margin-top: 50px;
+  background-color: #434643;
+  color: white;
 }
