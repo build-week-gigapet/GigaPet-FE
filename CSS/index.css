@@ -493,9 +493,10 @@ nav a {
   opacity: 0.8;
 }
 .container.home main .welcome h1 {
-  font-family: cursive;
+  font-family: "flappy";
   color: #163046;
   font-style: italic;
+  font-size: 40px;
 }
 .container.home main .welcome p {
   color: #112d45;
@@ -552,7 +553,7 @@ nav a {
 }
 .middle {
   box-shadow: inset 0 0 10px;
-  border: 1px dashed black;
+  border: 1px solid black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -564,12 +565,11 @@ nav a {
   }
 }
 .middle .charting-content {
-  width: 50%;
+  width: 75%;
   margin: 20px 20px;
   text-align: center;
   padding: 40px;
   line-height: 1.4;
-  border: 1px solid red;
 }
 @media (max-width: 500px) {
   .middle .charting-content {
@@ -612,6 +612,7 @@ nav a {
   font-family: "flappy";
   display: flex;
   justify-content: center;
+  font-size: 35px;
 }
 .spin .rotate {
   animation: rotation 8s infinite linear;
@@ -619,6 +620,9 @@ nav a {
 }
 .spin .rotate img {
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @keyframes rotation {
   from {
