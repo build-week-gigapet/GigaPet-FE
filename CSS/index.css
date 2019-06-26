@@ -323,7 +323,6 @@ nav a {
   flex-direction: row;
   background: #fff;
   width: 70%;
-  padding: 4% 0 6% 0;
   margin-top: 3vw;
   z-index: -5;
 }
@@ -367,14 +366,17 @@ nav a {
   justify-content: space-around;
   align-items: center;
   flex-direction: row;
-  height: 15vw;
+  height: 350px;
+  animation: expand 0.8s ease-in-out;
+  overflow: hidden;
 }
 @media (max-width: 1000px) {
   .about .cards .card-active {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: row;
+    height: 250px;
   }
   .about .cards .card-active .name,
   .about .cards .card-active .card-img {
@@ -383,7 +385,7 @@ nav a {
 }
 .about .cards .card-active .card-img {
   width: 30%;
-  margin-top: 6%;
+  height: 50%;
   border: 3px double black;
   box-shadow: inset 0px 0px 20px #000000;
 }
@@ -414,6 +416,24 @@ nav a {
   }
   100% {
     height: 5vw;
+  }
+}
+@keyframes expand {
+  0% {
+    height: 5vw;
+  }
+  100% {
+    height: 350px;
+  }
+}
+@media (max-width: 1000px) {
+  @keyframes expand {
+    0% {
+      height: 5vw;
+    }
+    100% {
+      height: 250px;
+    }
   }
 }
 .header {
