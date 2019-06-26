@@ -32,7 +32,7 @@
         ~
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
       -->
-      <section class="Intro">
+      <section class="intro">
         <h1>About GigaPet</h1>
         <p>Here at GigaPet, we are a diverse group of individuals obsessed with raising awareness in today's youth
           about healthy eating habits. We beleive that eating right is not only good for you, but it can be fun as well.
@@ -40,6 +40,8 @@
           their well being, we hope to help raise a generation of healthier, happier people. We are bringing the fun back
           to nutrition!
         </p>
+        <hr class="bookend">
+      
       </section>
       <!--
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -53,43 +55,43 @@
           <div class="tab-container">
             <div class="tab" data-tab="Person1">
               <img src="img/about/danR.jpg" alt="Thumbnail picture of Person 1">
-              <p>Daniel Rolon</p>
+              <p class="name">Daniel Rolon</p>
               <p class="role">Web UI Developer</p>
             </div>
     
             <div class="tab" data-tab="Person2">
               <img src="img/about/johnS.jpg" alt="Thumbnail picture of Person 2">
-              <p>John Schneider</p>
+              <p class="name">John Schneider</p>
               <p class="role">Web UI Developer</p>
             </div>
   
             <div class="tab tab-active" data-tab="Person3">
               <img src="img/about/austinC.jpg" alt="Thumbnail picture of Person 3">
-              <p>Austin Cole</p>
+              <p class="name">Austin Cole</p>
               <p class="role">Team Lead</p>
             </div>
   
             <div class="tab" data-tab="Person4">
               <img src="img/about/eliseS.jpg" alt="Thumbnail picture of Person 4">
-              <p>Elise Spain</p>
+              <p class="name">Elise Spain</p>
               <p class="role">Front End Architect</p>
             </div>
   
             <div class="tab" data-tab="Person5">
               <img src="img/about/brandonL.jpg" alt="Thumbnail picture of Person 5">
-              <p>Brandon Lively</p>
+              <p class="name">Brandon Lively</p>
               <p class="role">Backend Architect</p>
             </div>
   
             <div class="tab tab-hide" data-tab="Person6">
               <img src="img/about/jakeC.jpg" alt="Thumbnail picture of Person 6">
-              <p>Jake Connerly</p>
+              <p class="name">Jake Connerly</p>
               <p class="role">IOS Developer</p>
             </div>
   
             <div class="tab tab-hide" data-tab="Person7">
               <img src="img/about/stevenL.jpg" alt="Thumbnail picture of Person 7">
-              <p>Steven Leyva</p>
+              <p class="name">Steven Leyva</p>
               <p class="role">IOS Developer</p>
             </div>
           </div>
@@ -107,6 +109,7 @@
           </div>
         </div>
       </section>
+
       <!--
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         ~
@@ -118,77 +121,104 @@
         <div class="title"></div>
         
         <div class="card" data-tab="Person1">
-          <p class="name">Daniel Rolon</p>
-          <img src="" alt="Profile picture of Person 1">
-          <p>I'm a monster. Steve Holt! I care deeply for nature. That's why you always leave a note! Marry me.
-              Really? Did nothing cancel? I'm half machine. I'm a monster. No! I was ashamed to be SEEN with you. 
-              I like being with you. We just call it a sausage.</p>
-          <div class="socialMedia">
-            <a href="#">Github</a>
-            <a href="#">OtherPage</a>
+          <div class="card-img">
+            <img src="img/about/danR.jpg" alt="Profile picture of Person 1">
           </div>
-        </div>
-
-        <div class="card" data-tab="Person2">
-          <p class="name">John Schneider</p>
-          <img src="" alt="Profile picture of Person 2">
-          <p>I'm partial to air conditioning. He taught me a code. 
-            To survive. Only you could make those words cute. I'm generally confused most of the time.</p>
-          <div class="socialMedia">
-            <a href="#">Github</a>
-            <a href="#">OtherPage</a>
-          </div>
-        </div>
-
-        <div class="card card-active" data-tab="Person3">
-          <p class="name">Austin Cole</p>
-          <img src="" alt="Profile picture of Person 3">
-          <p>No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. 
-            Don't call me the Rotmeister. I hate yogurt. It's just stuff with bits in. I'm nobody's taxi service; 
-              I'm not gonna be there to catch you every time you feel like jumping out of a spaceship.</p>
-          <div class="socialMedia">
-            <a href="#">Github</a>
-            <a href="#">OtherPage</a>
-          </div>
-        </div>
-
-        <div class="card" data-tab="Person4">
-          <p class="name">Elise Spain</p>
-          <img src="" alt="Profile picture of Person 4">
-          <p>My fellow Earthicans, as I have explained in my book 'Earth in the Balance', and the much more popular
-             'Harry Potter and the Balance of Earth', we need to defend our planet against pollution. Also dark wizards.</p>
-          <div class="socialMedia">
-            <a href="#">Github</a>
-            <a href="#">OtherPage</a>
-          </div>
-        </div>
-
-        <div class="card" data-tab="Person5">
-            <p class="name">Brandon Lively</p>
-            <img src="" alt="Profile picture of Person 5">
-            <p>Well, she turned me into a newt.
-                On second thoughts, let's not go there. It is a silly place. Well, she turned me into a newt. 
-                Bloody Peasant! Ah, now we see the violence inherent in the system! I am your king.</p>
+          <div class="card-text">
+            <p class="name">Daniel Rolon</p>
+            <p>I'm a monster. Steve Holt! I care deeply for nature. That's why you always leave a note! Marry me.
+                Really? Did nothing cancel? I'm half machine. I'm a monster. No! I was ashamed to be SEEN with you. 
+                I like being with you. We just call it a sausage.</p>
             <div class="socialMedia">
               <a href="#">Github</a>
               <a href="#">OtherPage</a>
             </div>
           </div>
+        </div>
+
+        <div class="card" data-tab="Person2">
+          <div class="card-img">
+            <img src="img/about/johnS.jpg" alt="Profile picture of Person 2">
+          </div>
+          <div class="card-text">
+            <p class="name">John Schneider</p>
+            <p>I'm partial to air conditioning. He taught me a code. 
+              To survive. Only you could make those words cute. I'm generally confused most of the time.</p>
+            <div class="socialMedia">
+              <a href="#">Github</a>
+              <a href="#">OtherPage</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card card-active" data-tab="Person3">
+          <div class="card-img">
+            <img src="img/about/austinC.jpg" alt="Profile picture of Person 3">
+          </div>
+          <div class="card-text">
+            <p class="name">Austin Cole</p>
+            <p>No, I'll fix it. I'm good at fixing rot. Call me the Rotmeister. No, I'm the Doctor. 
+              Don't call me the Rotmeister. I hate yogurt. It's just stuff with bits in. I'm nobody's taxi service; 
+                I'm not gonna be there to catch you every time you feel like jumping out of a spaceship.</p>
+            <div class="socialMedia">
+              <a href="#">Github</a>
+              <a href="#">OtherPage</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tab="Person4">
+          <div class="card-img">
+            <img src="img/about/eliseS.jpg" alt="Profile picture of Person 4">
+          </div>
+          <div class="card-text">
+            <p class="name">Elise Spain</p>
+            <p>My fellow Earthicans, as I have explained in my book 'Earth in the Balance', and the much more popular
+               'Harry Potter and the Balance of Earth', we need to defend our planet against pollution. Also dark wizards.</p>
+            <div class="socialMedia">
+              <a href="#">Github</a>
+              <a href="#">OtherPage</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" data-tab="Person5">
+          <div class="card-img">
+            <img src="img/about/brandonL.jpg" alt="Profile picture of Person 5">
+          </div>
+          <div class="card-text">
+            <p class="name">Brandon Lively</p>
+            <p>Well, she turned me into a newt.
+                  On second thoughts, let's not go there. It is a silly place. Well, she turned me into a newt. 
+                  Bloody Peasant! Ah, now we see the violence inherent in the system! I am your king.</p>
+            <div class="socialMedia">
+              <a href="#">Github</a>
+              <a href="#">OtherPage</a>
+            </div>
+          </div>
+        </div>
 
         <div class="card" data-tab="Person6">
+          <div class="card-img">
+            <img src="img/about/jakeC.jpg" alt="Profile picture of Person 6">
+          </div>
+          <div class="card-text">
             <p class="name">Jake Connerly</p>
-            <img src="" alt="Profile picture of Person 6">
             <p>I want to come with you to Alderaan. There's nothing for me here now. 
               I want to learn the ways of the Force and be a Jedi, like my father before me.</p>
             <div class="socialMedia">
               <a href="#">Github</a>
               <a href="#">OtherPage</a>
-           </div>
-         </div>
+            </div>
+          </div>
+        </div>
 
         <div class="card" data-tab="Person7">
-           <p class="name">Steven Leyva</p>
-            <img src="" alt="Profile picture of Person 7">
+          <div class="card-img">
+            <img src="img/about/stevenL.jpg" alt="Profile picture of Person 7">
+          </div>
+          <div class="card-text">
+            <p class="name">Steven Leyva</p>
             <p>This is the greatest case of false advertising I've seen since I sued the movie "The Never Ending Story."
                 Donuts. Is there anything they can't do? I prefer a vehicle that doesn't hurt Mother Earth. It's a go-cart,
                 powered by my own sense of self-satisfaction.</p>
@@ -197,6 +227,7 @@
               <a href="#">OtherPage</a>
             </div>
           </div>
+        </div>
       </section>
     </main>
     
