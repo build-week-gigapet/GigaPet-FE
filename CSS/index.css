@@ -427,11 +427,13 @@ nav a {
   }
 }
 .about .cards .card-active .card-text p {
+  letter-spacing: 0.1em;
   padding: 20px 50px;
   background-image: url(../img/about/frostedGlass.png);
   background-size: contain;
   border-radius: 50px;
-  border: 2px groove #659dbd;
+  border: 10px outset #659dbd;
+  box-shadow: 0 0 10px black;
 }
 @media (max-width: 1000px) {
   .about .cards .card-active .card-text p {
