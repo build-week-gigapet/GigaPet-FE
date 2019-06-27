@@ -515,6 +515,8 @@ nav a {
   font-weight: bold;
   opacity: 0.7;
   box-shadow: -5px -5px 10px;
+  padding: 10px 10px;
+  margin-bottom: 11px;
 }
 @media (max-width: 500px) {
   .container.home main .tabs {
@@ -564,10 +566,10 @@ nav a {
   }
 }
 .container.home main .tabs .topic .tab:hover {
-  text-decoration: underline;
+  text-decoration: underline overline;
 }
 .container.home main .tabs .topic .active-tab {
-  background-color: white;
+  background-color: #C7E1F1;
   color: #434643;
   border: 2px solid black;
 }
@@ -580,7 +582,7 @@ nav a {
   height: 400px;
   position: relative;
   overflow: hidden;
-  margin-top: 16px;
+  margin-top: 11px;
 }
 .container.home main .carousel img {
   display: none;
@@ -751,6 +753,8 @@ nav a {
   text-align: center;
   width: 150px;
   height: 55px;
+  background-image: radial-gradient(blue, black);
+  color: white;
 }
 .click button:hover {
   background: #434643;

@@ -46,6 +46,8 @@
       font-weight: bold;
       opacity: 0.7;
       box-shadow: -5px -5px 10px;
+      padding: 10px 10px;
+      margin-bottom: 11px;
       @media (max-width: 500px) {
         width: 100%;
         .flex(center, center);
@@ -73,44 +75,16 @@
             .flex(none, center);
           }
           &:hover {
-            text-decoration: underline;
+            text-decoration: underline overline;
           }
         }
         .active-tab {
-          background-color: white;
+          background-color: @gigapet-color-bkg-third;
           color: @gigapet-color-primary;
           border: 2px solid black;
         }
       }
     }
-
-    // .comments-container {
-    //   .flex(space-evenly);
-    //   width: 100%;
-    //   flex-wrap: wrap;
-
-    //   .comments {
-    //     border-bottom: 1px solid gray;
-    //     .flex(space-between, none, column) width: 350px;
-    //     margin-bottom: 15px;
-    //     padding: 23px;
-    //     .quote {
-    //       font-size: 23px;
-    //       font-family: Verdana, Geneva, Tahoma, sans-serif;
-    //     }
-    //     .speaker {
-    //       .flex(none, center);
-    //       margin-top: 12px;
-
-    //       span {
-    //         padding-left: 10px;
-    //         font-size: 12px;
-    //         letter-spacing: 1px;
-    //         font-weight: bold;
-    //       }
-    //     }
-    //   }
-    // }
 
     .carousel {
       width: 100%;
@@ -118,7 +92,7 @@
       height: 400px;
       position: relative;
       overflow: hidden;
-      margin-top: 16px;
+      margin-top: 11px;
 
       img {
         display: none;
@@ -292,6 +266,8 @@
     text-align: center;
     width: 150px;
     height: 55px;
+    background-image: radial-gradient(blue, black);
+    color: white;
   }
   button:hover {
     background: @gigapet-color-primary;
