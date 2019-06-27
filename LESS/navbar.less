@@ -3,21 +3,34 @@ nav {
   .flex(space-between, center);
   position: fixed;
   height: 60px;
-  background-color: @gigapet-color-bkg-third;
+  background-color: @gigapet-color-bkg-third-trans;
   box-shadow: 0 0 5px black;
   z-index: 100;
-  opacity: 0.8;
+  //opacity: 0.8;
 
   .logo p {
     font-family: "flappy";
     font-size: 55px;
-    color: @gigapet-color-black;
+    color: @gigapet-color-white;
     margin-left:20px;
+
+    &:hover{
+      transition: 0.2s;
+      color: @gigapet-color-purp;
+      transform: scale(1.1);
+    }
   }
 
   a {
     margin: 0 10px;
     text-decoration: none;
-    color: @gigapet-color-h3;
+    color: @gigapet-color-white;
+
+
+    &:hover{
+      transition: 0.2s;
+      color: @gigapet-color-purp;
+      font-size: 20px;
+    }
   }
 }

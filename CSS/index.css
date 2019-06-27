@@ -27,21 +27,30 @@ nav {
   flex-direction: row;
   position: fixed;
   height: 60px;
-  background-color: #C7E1F1;
+  background-color: #C7E1F1CC;
   box-shadow: 0 0 5px black;
   z-index: 100;
-  opacity: 0.8;
 }
 nav .logo p {
   font-family: "flappy";
   font-size: 55px;
-  color: black;
+  color: white;
   margin-left: 20px;
+}
+nav .logo p:hover {
+  transition: 0.2s;
+  color: #363D98;
+  transform: scale(1.1);
 }
 nav a {
   margin: 0 10px;
   text-decoration: none;
-  color: #163046;
+  color: white;
+}
+nav a:hover {
+  transition: 0.2s;
+  color: #363D98;
+  font-size: 20px;
 }
 .about .carousel {
   position: relative;
@@ -95,6 +104,7 @@ nav a {
 .about .carousel .tab-wrapper .tab-container .tab img {
   width: 100%;
   border-radius: 50%;
+  box-shadow: 0 0px 6px black;
   border: 2px solid white;
 }
 .about .carousel .tab-wrapper .tab-container .tab:nth-child(2n) {
@@ -182,21 +192,34 @@ nav a {
   width: 100%;
 }
 .about .carousel .carousel-text h3 {
-  font-size: 40px;
+  font-family: 'flappy';
+  font-size: 49px;
+  background: #659dbd;
+  color: #363D98;
+  text-shadow: 0  0 5px white;
 }
 @media (max-width: 500px) {
   .about .carousel .carousel-text h3 {
-    font-size: 20px;
+    font-size: 30px;
   }
 }
 .about .carousel .button.btn-left,
 .about .carousel .button.btn-right {
   margin: 0;
-  width: 5%;
+  width: 7%;
   cursor: pointer;
+  background: #659dbd;
 }
 .about .carousel .button.btn-left img,
 .about .carousel .button.btn-right img {
+  width: 90%;
+}
+.about .carousel .button.btn-left:hover,
+.about .carousel .button.btn-right:hover {
+  transition: 0.2s;
+}
+.about .carousel .button.btn-left:hover img,
+.about .carousel .button.btn-right:hover img {
   width: 100%;
 }
 .about .move-out-from-left {
@@ -383,7 +406,7 @@ nav a {
   content: '';
   position: absolute;
   bottom: -1px;
-  left: -35px;
+  left: -38px;
   width: 35px;
   height: 33px;
   background: url("../img/about/shadow.png");
@@ -394,7 +417,7 @@ nav a {
   content: '';
   position: absolute;
   bottom: -1px;
-  right: -35px;
+  right: -38px;
   width: 35px;
   height: 33px;
   background: url("../img/about/shadow.png");
@@ -727,7 +750,7 @@ footer {
   font-size: 100px;
   margin: 0;
   color: white;
-  text-shadow: 0 1px 1px black;
+  text-shadow: 0 0px 10px black;
 }
 .container.about main .intro p {
   font-weight: 200;
@@ -785,7 +808,7 @@ footer {
   flex-direction: row;
   height: 50px;
   margin-top: 50px;
-  background-color: #434643;
+  background-color: #29678C;
   color: white;
 }
 @keyframes spinZForward {
