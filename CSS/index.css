@@ -562,12 +562,12 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   line-height: 1.4;
-  box-shadow: 0 0 10px royalblue;
+  box-shadow: 0 0 10px gray;
   opacity: 0.8;
 }
 .container.home main .welcome h1 {
   font-family: "flappy";
-  color: #163046;
+  color: white;
   font-style: italic;
   font-size: 40px;
 }
@@ -575,6 +575,76 @@ nav a:hover {
   color: #112d45;
   animation-duration: 3s;
   animation-name: slidein;
+}
+.container.home main .tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  height: 40px;
+  background-color: #434643;
+  font-weight: bold;
+  opacity: 0.7;
+  box-shadow: -5px -5px 10px;
+  padding: 10px 10px;
+  margin-bottom: 11px;
+}
+@media (max-width: 500px) {
+  .container.home main .tabs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.container.home main .tabs .topic {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  .container.home main .tabs .topic {
+    width: 100%;
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.container.home main .tabs .topic .tab {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  color: black;
+  background-color: #bab9ba;
+  margin: 0 5px;
+  padding: 2px 10px;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+@media (max-width: 500px) {
+  .container.home main .tabs .topic .tab {
+    width: 100%;
+    display: flex;
+    justify-content: none;
+    align-items: center;
+    flex-direction: row;
+  }
+}
+.container.home main .tabs .topic .tab:hover {
+  text-decoration: underline overline;
+}
+.container.home main .tabs .topic .active-tab {
+  background-color: #C7E1F1;
+  color: #434643;
+  border: 2px solid black;
 }
 .container.home main .carousel {
   width: 100%;
@@ -585,7 +655,7 @@ nav a:hover {
   height: 400px;
   position: relative;
   overflow: hidden;
-  margin-top: 16px;
+  margin-top: 11px;
 }
 .container.home main .carousel img {
   display: none;
@@ -624,6 +694,45 @@ nav a:hover {
 .container.home main img {
   width: 100%;
 }
+.comments-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: none;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.comments-container .comment {
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: none;
+  flex-direction: column;
+  margin-bottom: 15px;
+  width: 250px;
+  padding: 23px;
+  box-shadow: 0 0 10px gray;
+  background-image: radial-gradient(blue, black, gray);
+}
+.comments-container .comment .quote {
+  font-size: 23px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
+}
+.comments-container .comment .speaker {
+  display: flex;
+  justify-content: none;
+  align-items: center;
+  flex-direction: row;
+  margin-top: 12px;
+}
+.comments-container .comment .speaker span {
+  padding-left: 10px;
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: white;
+}
 .middle {
   box-shadow: inset 0 0 10px;
   border: 1px solid black;
@@ -631,10 +740,11 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 @media (max-width: 500px) {
   .middle {
-    width: 95%;
+    width: 100%;
   }
 }
 .middle .charting-content {
@@ -653,6 +763,7 @@ nav a:hover {
   color: #163046;
   font-family: "flappy";
   font-size: 55px;
+  color: white;
 }
 .middle .charting-content img {
   width: 100%;
@@ -663,8 +774,6 @@ nav a:hover {
 }
 .middle .charting-content p {
   color: #112d45;
-  animation-duration: 3s;
-  animation-name: slidein;
 }
 @keyframes slidein {
   from {
@@ -680,12 +789,10 @@ nav a:hover {
   width: 100%;
   display: flex;
   justify-content: center;
-}
-.spin p {
-  font-family: "flappy";
-  display: flex;
-  justify-content: center;
-  font-size: 35px;
+  border: 1px solid black;
+  box-shadow: inset 0 0 10px;
+  padding: 25px;
+  padding-top: 30px;
 }
 .spin .rotate {
   animation: rotation 8s infinite linear;
@@ -719,6 +826,8 @@ nav a:hover {
   text-align: center;
   width: 150px;
   height: 55px;
+  background-image: radial-gradient(blue, black);
+  color: white;
 }
 .click button:hover {
   background: #434643;
