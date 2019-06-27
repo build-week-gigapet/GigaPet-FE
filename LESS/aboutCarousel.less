@@ -3,7 +3,9 @@
     position: relative;
     .flex(space-around,center,row);
     width: 100%;
-    margin-top: 2vw;
+    padding-top: 2vw;
+    //background-image: linear-gradient(to bottom, @gigapet-color-background 0%, #F2D95C 40%, #F2D95C 60%, @gigapet-color-background 100%);
+    //z-index: -999;
 
     .tab-wrapper{
       position: relative;
@@ -22,7 +24,6 @@
         }
 
         .tab{
-          //overflow: hidden;
           width: 25%;
           height: 25vw;
          //box-shadow: 0 0 4rem 0 @gigapet-color-lightgrey;
@@ -36,7 +37,7 @@
           img{
             width:100%;
             border-radius: 50%;
-            border: 2px solid black;
+            border: 2px solid white;
           }
 
           &:nth-child(2n){
@@ -88,6 +89,7 @@
           }
           .name{
             font-weight: 600;
+            color: white;
           }
           p, h3{
             height: 5%;
@@ -104,6 +106,7 @@
 
           }
           .role{
+            color: @gigapet-color-purp;
             @media(max-width: 1000px){
               display: none;
             }

@@ -84,4 +84,5 @@ class TabCard{
   }
 }
 
-let carousel = new Carousel(document.querySelector('.carousel'));
+//let carousel = new Carousel(document.querySelector('.carousel'));
+let carousel = document.querySelectorAll('.carousel').forEach(caro=>new Carousel(caro));

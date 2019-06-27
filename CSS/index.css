@@ -26,8 +26,9 @@ nav {
   align-items: center;
   flex-direction: row;
   position: fixed;
-  height: 44px;
-  background-color: #434643;
+  height: 60px;
+  background-color: #C7E1F1;
+  box-shadow: 0 0 5px black;
   z-index: 100;
   opacity: 0.8;
 }
@@ -35,6 +36,7 @@ nav .logo p {
   font-family: "flappy";
   font-size: 55px;
   color: black;
+  margin-left: 20px;
 }
 nav a {
   margin: 0 10px;
@@ -48,7 +50,7 @@ nav a {
   align-items: center;
   flex-direction: row;
   width: 100%;
-  margin-top: 2vw;
+  padding-top: 2vw;
 }
 .about .carousel .tab-wrapper {
   position: relative;
@@ -87,7 +89,7 @@ nav a {
 .about .carousel .tab-wrapper .tab-container .tab img {
   width: 100%;
   border-radius: 50%;
-  border: 2px solid black;
+  border: 2px solid white;
 }
 .about .carousel .tab-wrapper .tab-container .tab:nth-child(2n) {
   transform: scale(0.85);
@@ -137,6 +139,7 @@ nav a {
 }
 .about .carousel .tab-wrapper .tab-container .tab .name {
   font-weight: 600;
+  color: white;
 }
 .about .carousel .tab-wrapper .tab-container .tab p,
 .about .carousel .tab-wrapper .tab-container .tab h3 {
@@ -153,6 +156,9 @@ nav a {
   .about .carousel .tab-wrapper .tab-container .tab h3 {
     font-size: 8px;
   }
+}
+.about .carousel .tab-wrapper .tab-container .tab .role {
+  color: #363D98;
 }
 @media (max-width: 1000px) {
   .about .carousel .tab-wrapper .tab-container .tab .role {
@@ -337,8 +343,14 @@ nav a {
   width: 70%;
   margin-top: 3vw;
   z-index: -5;
-  border: 4px solid black;
+  border: 4px solid white;
+  border-radius: 10px;
   box-shadow: inset  0px 0px 15px 10px black;
+}
+@media (max-width: 1000px) {
+  .about .cards {
+    width: 95%;
+  }
 }
 .about .cards .title {
   position: absolute;
@@ -352,8 +364,8 @@ nav a {
   margin-left: -12.5%;
   padding-top: 0.5%;
   background-image: linear-gradient(to bottom, #659dbd 0%, #93BFDA 100%);
-  border-left: 4px solid black;
-  border-right: 4px solid black;
+  border-left: 4px solid white;
+  border-right: 4px solid white;
   z-index: 10;
 }
 .about .cards .title:before {
@@ -405,7 +417,7 @@ nav a {
 .about .cards .card-active .card-img {
   width: 30%;
   height: 60%;
-  border: 3px double black;
+  border: 3px double white;
   box-shadow: inset 0px 0px 20px #000000;
 }
 .about .cards .card-active .card-img img {
@@ -416,18 +428,23 @@ nav a {
 }
 .about .cards .card-active .card-text {
   width: 60%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
 }
 @media (max-width: 1000px) {
   .about .cards .card-active .card-text {
     width: 87%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
   }
 }
+.about .cards .card-active .card-text h2 {
+  color: #363D98;
+  text-decoration: underline;
+}
 .about .cards .card-active .card-text p {
-  letter-spacing: 0.1em;
+  color: #112d45;
+  letter-spacing: 0.05em;
   padding: 20px 50px;
   background-image: url(../img/about/frostedGlass.png);
   background-size: contain;
@@ -439,6 +456,7 @@ nav a {
   .about .cards .card-active .card-text p {
     padding: 10px 25px;
     font-size: 14px;
+    font-weight: 200;
   }
 }
 .shrink {
@@ -672,9 +690,9 @@ footer {
   }
 }
 .container.about main {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -686,10 +704,25 @@ footer {
   }
 }
 .container.about main .intro {
+  width: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+.container.about main .intro h1 {
+  font-family: 'flappy';
+  font-size: 100px;
+  margin: 0;
+  color: white;
+  text-shadow: 0 1px 1px black;
+}
+.container.about main .intro p {
+  font-weight: 200;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1.5em;
+  color: #363D98;
 }
 .container.about main .intro hr {
   border: 0;
@@ -706,7 +739,7 @@ footer {
   overflow: visible;
   position: relative;
   border-width: 5px;
-  border-color: hsl(0, 0%, 50%) transparent;
+  border-color: hsl(0, 0%, 100%) transparent;
   height: 11px;
   border-style: double;
   width: 80%;
@@ -719,17 +752,19 @@ footer {
   height: 7.071px;
   display: block;
   border-width: 0 7.071px 7.071px 0;
-  border-color: hsl(0, 0%, 50%);
+  border-color: hsl(0, 0%, 100%);
   border-style: double;
   box-sizing: border-box;
 }
 .container.about main .intro .bookend:before {
   transform: translateZ(0) rotate(-45deg);
   left: -21px;
+  animation: spinZForward 1s infinite linear;
 }
 .container.about main .intro .bookend:after {
   transform: translateZ(0) rotate(135deg);
   right: -21px;
+  animation: spinZBackward 1s infinite linear;
 }
 .container.about footer {
   display: flex;
@@ -740,4 +775,20 @@ footer {
   margin-top: 50px;
   background-color: #434643;
   color: white;
+}
+@keyframes spinZForward {
+  from {
+    transform: rotateX(0deg) rotateZ(-45deg);
+  }
+  to {
+    transform: rotateX(365deg) rotateZ(-45deg);
+  }
+}
+@keyframes spinZBackward {
+  from {
+    transform: rotateX(0deg) rotateZ(135deg);
+  }
+  to {
+    transform: rotateX(-365deg) rotateZ(135deg);
+  }
 }
