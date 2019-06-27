@@ -6,9 +6,14 @@
     background-size: cover;
     width: 70%;
     margin-top: 3vw;
-    z-index: -5;
-    border: 4px solid black;
+    //z-index: -5;
+    border: 4px solid white;
+    border-radius: 10px;
     box-shadow: inset  0px 0px 15px 10px black;
+
+    @media(max-width:1000px){
+      width:95%;
+    }
 
     .title {
 			position: absolute;
@@ -22,8 +27,8 @@
 			margin-left: -12.5%;
       padding-top: 0.5%;
       background-image: linear-gradient(to bottom, @gigapet-color-background 0%, @gigapet-color-bkg-secondary 100%);
-      border-left: 4px solid black;
-      border-right: 4px solid black;
+      border-left: 4px solid white;
+      border-right: 4px solid white;
       
       z-index: 10;
       
@@ -31,7 +36,7 @@
         content: '';
         position: absolute;
         bottom: -1px;
-        left: -35px;
+        left: -38px;
         width: 35px;
         height: 33px;
         background: url("../img/about/shadow.png");
@@ -43,7 +48,7 @@
         content: '';
         position: absolute;
         bottom: -1px;
-        right: -35px;
+        right: -38px;
         width: 35px;
         height: 33px;
         background: url("../img/about/shadow.png");
@@ -63,6 +68,7 @@
       overflow: hidden;
       //border: 4px solid black;
       //box-shadow: inset  0px 0px 15px 10px black;
+      
 
       @media(max-width:1000px){
         .flex(center,center,row);
@@ -73,28 +79,34 @@
       }
 
       .card-img{
-        width:30%;
-        height: 60%;
-        border: 3px double black;
+        width:29%;
+        height: 70%;
+        border: 3px double white;
         box-shadow: inset 0px 0px 20px rgba(0,0,0,1);
         
         img{
           width:100%;
           height:100%;
           position: relative;
-          z-index: -1;
+          z-index: 999;
         }
       }
       .card-text{
         width:60%;
+        .flex(space-evenly,center,column);
 
         @media(max-width: 1000px){
           width:87%;
-          .flex(center,center,column);
+        }
+
+        h2{
+          color: @gigapet-color-purp;
+          text-decoration: underline;
         }
 
         p{
-          letter-spacing: 0.1em;
+          color: @gigapet-color-para;
+          letter-spacing: 0.05em;
           padding:20px 50px;
           //background: @gigapet-color-bkg-third;
           background-image: url(../img/about/frostedGlass.png);
@@ -105,6 +117,25 @@
           @media(max-width: 1000px){
             padding: 10px 25px;
             font-size: 14px;
+            font-weight: 200;
+          }
+        }
+
+        .socialMedia{
+          .flex(center, center);
+          width: 100%;
+        
+          a{
+            width: 10%;
+            color: white;
+            padding: 0;
+            font-size: 30px;
+            z-index: 999;
+
+            &:hover{
+              transition: 0.3s;
+              transform: scale(1.2); 
+            }
           }
         }
       }

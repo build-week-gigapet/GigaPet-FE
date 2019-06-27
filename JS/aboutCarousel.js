@@ -36,7 +36,7 @@ class Carousel{
       this.card = new TabCard(this.card);
       document.querySelector('.cards').classList.remove('shrink'); 
       this.card.selectCard();
-
+      
 
     }, 500)
 
@@ -81,7 +81,12 @@ class TabCard{
   }
   selectCard(){
     this.element.classList.add('card-active');
+    setTimeout(function(){
+      //window.scrollTo(0,document.querySelector('.cards').offsetTop + 600);
+      document.querySelector('.cards').scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    },500);
   }
 }
 
-let carousel = new Carousel(document.querySelector('.carousel'));
+//let carousel = new Carousel(document.querySelector('.carousel'));
+let carousel = document.querySelectorAll('.carousel').forEach(caro=>new Carousel(caro));

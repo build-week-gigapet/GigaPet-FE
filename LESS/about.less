@@ -1,8 +1,9 @@
 .container.about{
   main{
-    width: 85%;
+    width: 100%;
+    max-width: 1366px;
     margin: 0 auto;
-    margin-top: 50px;
+    margin-top: 85px;
     .flex(center,center,column);
 
     @media(max-width:500px){
@@ -10,7 +11,25 @@
     }
 
     .intro{
+      width:85%;
       .flex(center,center, column);
+
+      h1{
+        font-family: 'flappy';
+        font-size: 100px;
+        margin: 0;
+        color: @gigapet-color-white;
+        text-shadow: 0 0px 10px black;
+      }
+
+      p{
+        font-weight: 200;
+        font-size: 1.5em;
+        text-align: center;
+        line-height: 1.5em;
+        color:  @gigapet-color-purp;
+      }
+
       hr {
         border: 0;
         margin: 1.35em auto;
@@ -26,7 +45,7 @@
         overflow: visible;
         position: relative;
         border-width: 5px;
-        border-color: hsl(0, 0%, 50%) transparent;
+        border-color: hsl(0, 0%, 100%) transparent;
         height: 11px;
         border-style: double;
         width: 80%;
@@ -38,7 +57,7 @@
           height: 7.071px;
           display: block;
           border-width: 0 7.071px 7.071px 0;
-          border-color: hsl(0, 0%, 50%);
+          border-color: hsl(0, 0%, 100%);
           border-style: double;
           box-sizing: border-box;
         }
@@ -46,10 +65,12 @@
         &:before{
           transform: translateZ(0) rotate(-45deg);
           left: -21px;
+          animation: spinZForward 1s infinite linear;
         }
         &:after{
           transform: translateZ(0) rotate(135deg);
           right: -21px;
+          animation: spinZBackward 1s infinite linear;
         }
       }
     }
@@ -60,7 +81,27 @@
     .flex(center,center);
     height: 50px;
     margin-top: 50px;
-    background-color: @gigapet-color-primary;
+    background-color: @gigapet-color-bkg-dark;
     color: @gigapet-color-white;
+  }
+}
+
+
+
+@keyframes spinZForward {
+  from {
+    transform: rotateX(0deg) rotateZ(-45deg);
+  }
+  to {
+    transform: rotateX(365deg) rotateZ(-45deg);
+  }
+}
+
+@keyframes spinZBackward {
+  from {
+    transform: rotateX(0deg) rotateZ(135deg);
+  }
+  to {
+    transform: rotateX(-365deg) rotateZ(135deg);
   }
 }
