@@ -376,7 +376,6 @@ nav a:hover {
   background-size: cover;
   width: 70%;
   margin-top: 3vw;
-  z-index: -5;
   border: 4px solid white;
   border-radius: 10px;
   box-shadow: inset  0px 0px 15px 10px black;
@@ -458,7 +457,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: -1;
+  z-index: 999;
 }
 .about .cards .card-active .card-text {
   width: 60%;
@@ -492,6 +491,24 @@ nav a:hover {
     font-size: 14px;
     font-weight: 200;
   }
+}
+.about .cards .card-active .card-text .socialMedia {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+.about .cards .card-active .card-text .socialMedia a {
+  width: 10%;
+  color: white;
+  padding: 0;
+  font-size: 30px;
+  z-index: 999;
+}
+.about .cards .card-active .card-text .socialMedia a:hover {
+  transition: 0.3s;
+  transform: scale(1.2);
 }
 .shrink {
   animation: shrink 0.5s ease-in-out;
