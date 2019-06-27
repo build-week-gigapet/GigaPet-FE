@@ -494,7 +494,7 @@ nav a {
 }
 .container.home main .welcome h1 {
   font-family: "flappy";
-  color: #163046;
+  color: white;
   font-style: italic;
   font-size: 40px;
 }
@@ -667,10 +667,11 @@ nav a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 10px;
 }
 @media (max-width: 500px) {
   .middle {
-    width: 95%;
+    width: 100%;
   }
 }
 .middle .charting-content {
@@ -689,6 +690,7 @@ nav a {
   color: #163046;
   font-family: "flappy";
   font-size: 55px;
+  color: white;
 }
 .middle .charting-content img {
   width: 100%;
@@ -699,8 +701,6 @@ nav a {
 }
 .middle .charting-content p {
   color: #112d45;
-  animation-duration: 3s;
-  animation-name: slidein;
 }
 @keyframes slidein {
   from {

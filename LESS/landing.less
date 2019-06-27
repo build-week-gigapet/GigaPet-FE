@@ -24,7 +24,7 @@
 
       h1 {
         font-family: "flappy";
-        color: @gigapet-color-h3;
+        color: @gigapet-color-white;
         font-style: italic;
         font-size: 40px;
       }
@@ -170,8 +170,10 @@
   border: 1px solid black;
   .flex(center, center, column);
 
+  margin-bottom: 10px;
+
   @media (max-width: 500px) {
-    width: 95%;
+    width: 100%;
   }
 
   .charting-content {
@@ -188,6 +190,7 @@
       color: @gigapet-color-h3;
       font-family: "flappy";
       font-size: 55px;
+      color: white;
     }
 
     img {
@@ -201,8 +204,6 @@
 
     p {
       color: @gigapet-color-para;
-      animation-duration: 3s;
-      animation-name: slidein;
       @media (max-width: 500px) {
       }
     }
